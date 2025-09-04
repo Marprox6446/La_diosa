@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Para mi amor 💖</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: linear-gradient(135deg, #ffb6c1, #ff69b4, #ffc0cb);
+      color: #fff;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    header {
+      padding: 40px 20px;
+    }
+
+    header h1 {
+      font-size: 3em;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+      animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #fff, 0 0 20px #ff66b2; }
+      to { text-shadow: 0 0 20px #fff, 0 0 40px #ff1493; }
+    }
+
+    .mensaje {
+      margin: 30px auto;
+      padding: 20px;
+      max-width: 600px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 20px;
+      font-size: 1.4em;
+      line-height: 1.6em;
+      box-shadow: 0 0 20px rgba(255,255,255,0.3);
+    }
+
+    .typewriter {
+      border-right: 2px solid #fff;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 0;
+      animation: typing 6s steps(50, end) forwards, blink 1s infinite;
+      margin: 20px auto;
+      font-size: 1.3em;
+      font-weight: bold;
+      max-width: 90%;
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+    @keyframes blink {
+      50% { border-color: transparent }
+    }
+
+    footer {
+      margin-top: 50px;
+      padding: 20px;
+      font-size: 1.2em;
+      opacity: 0.8;
+    }
+
+    .corazon {
+      position: fixed;
+      bottom: -10px;
+      color: #ff1a75;
+      font-size: 24px;
+      animation: flotar 6s linear infinite;
+      opacity: 0.8;
+    }
+
+    @keyframes flotar {
+      0% { transform: translateY(0) scale(1); opacity: 1; }
+      100% { transform: translateY(-100vh) scale(1.5); opacity: 0; }
+    }
+
+    .btn-sorpresa, .btn-musica {
+      background: #ff1493;
+      border: none;
+      padding: 15px 25px;
+      border-radius: 30px;
+      font-size: 1.2em;
+      color: white;
+      cursor: pointer;
+      box-shadow: 0 0 15px rgba(255,255,255,0.5);
+      transition: transform 0.2s;
+      margin: 10px;
+    }
+
+    .btn-sorpresa:hover, .btn-musica:hover {
+      transform: scale(1.1);
+    }
+
+    .sorpresa {
+      display: none;
+      margin: 20px auto;
+      font-size: 1.4em;
+      background: rgba(255,255,255,0.2);
+      padding: 15px;
+      border-radius: 15px;
+      max-width: 500px;
+    }
+
+    .galeria {
+      margin: 40px auto;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .galeria img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0 0 15px rgba(255,255,255,0.6);
+      transition: transform 0.3s;
+    }
+
+    .galeria img:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>💖 Para ti, mi amor 💖</h1>
+  </header>
+
+  <div class="mensaje">
+    <p>
+      🌹 Mi vida, desde que llegaste, todo en mí cambió...  
+      tus ojos son mis estrellas ✨, tu sonrisa mi sol ☀️  
+      y tu voz es la melodía más hermosa que podría escuchar 🎶.  
+    </p>
+    <p>
+      💕 Eres la razón por la que cada día quiero ser mejor,  
+      porque en tu mirada encuentro mi hogar 🏡  
+      y en tu abrazo encuentro la paz que mi corazón siempre buscó 💓.  
+    </p>
+    <p>
+      🌸 Cada segundo contigo es un regalo 🎁,  
+      cada instante a tu lado es un recuerdo eterno 📖,  
+      y cada beso tuyo es un pedacito de cielo en la Tierra 💖.  
+    </p>
+    <p>
+      💌 Prometo cuidarte como el tesoro más valioso 💎,  
+      amarte con la fuerza de mil universos 🌌,  
+      y recordarte cada día lo increíble que eres ✨.  
+    </p>
+    <p>
+      🌹💞 Tú y yo somos destino, somos magia, somos todo.  
+      No necesito nada más que a ti, porque en tu amor encontré mi paraíso 🌴💖.  
+    </p>
+    <p>
+      💘 Te amo más de lo que las palabras pueden decir,  
+      más allá del tiempo ⏳, de la distancia 🌍, de todo…  
+      Te amo con la certeza de que eres mi siempre 💞💞💞.  
+    </p>
+  </div>  
+
+  <div class="typewriter">Eres mi razón de sonreír todos los días... 💞</div>
+
+  <div class="galeria">
+    <img src="1.jpg" alt="Nosotros 1">
+    <img src="2.jpg" alt="Nosotros 2">
+    <img src="3.jpg" alt="Nosotros 3">
+  </div>
+
+  <button class="btn-sorpresa" onclick="mostrarSorpresa()">🎁 Toca para una sorpresa</button>
+  <button class="btn-musica" onclick="toggleMusica()">🎶 Música</button>
+
+  <div class="sorpresa" id="sorpresa">
+    Te amo más de lo que las palabras pueden explicar 💖🌹
+  </div>
+
+  <footer>
+    Con todo mi amor, para siempre 💘
+  </footer>
+
+  <!-- Música romántica -->
+  <audio id="musica" autoplay loop>
+    <source src="manos.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    function crearCorazon() {
+      const corazon = document.createElement("div");
+      corazon.classList.add("corazon");
+      corazon.innerHTML = ["❤","💕","💖","💘","💓"][Math.floor(Math.random()*5)];
+      corazon.style.left = Math.random() * 100 + "vw";
+      corazon.style.fontSize = Math.random() * 20 + 20 + "px";
+      document.body.appendChild(corazon);
+
+      setTimeout(() => { corazon.remove(); }, 6000);
+    }
+    setInterval(crearCorazon, 500);
+
+    function mostrarSorpresa() {
+      document.getElementById("sorpresa").style.display = "block";
+    }
+
+    function toggleMusica() {
+      const musica = document.getElementById("musica");
+      if (musica.paused) {
+        musica.play();
+      } else {
+        musica.pause();
+      }
+    }
+  </script>
+</body>
+</html>
